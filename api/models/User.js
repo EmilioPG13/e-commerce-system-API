@@ -1,3 +1,12 @@
+/*Los datos necesario para registrar a un cliente, son:
+  - Nombre
+  - Apellidos
+  - Teléfono
+  - Correo
+  - Contraseña
+  - No. de tarjeta
+  - Dirección de envío*/
+
 import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
@@ -8,18 +17,28 @@ const userSchema = new mongoose.Schema({
     lastName: {
     type: String,
 },
+    phone: {
+    type: String,
+},
     email: {
     type: String,
     required: true,
     unique: true,
 },
-    phone: {
-    type: String,
-},
     password: {
     type: String,
-    required: true,
-    },
+    required: true
+},
+    cardNumber: {
+        type: Number,
+        required: true,
+        unique: true
+},
+    shippingAddress: {
+        type: String,
+        required: true,
+    }
+
 });
 
 export default mongoose.model('User', userSchema);

@@ -32,3 +32,5 @@
             type: String
         }
     })
+
+    export default mongoose.model('Product', productSchema);
