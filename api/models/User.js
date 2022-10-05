@@ -1,24 +1,17 @@
-/*Los datos necesario para registrar a un cliente, son:
-  - Nombre
-  - Apellidos
-  - Teléfono
-  - Correo
-  - Contraseña
-  - No. de tarjeta
-  - Dirección de envío*/
-
 import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
     name: {
     type: String,
-    required: true,
+    required: true
 },
     lastName: {
     type: String,
+    required: true
 },
     phone: {
     type: String,
+    required: true
 },
     email: {
     type: String,
