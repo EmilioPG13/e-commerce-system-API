@@ -7,6 +7,10 @@ const shoppingCartSchema = new mongoose.Schema ({
         type: Number,
         required: true
 },
+    product: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Product',
+    }]
 })
 
 export default mongoose.model('shoppingCart', shoppingCartSchema)
